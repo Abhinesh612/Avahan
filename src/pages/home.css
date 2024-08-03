@@ -1,0 +1,18 @@
+.parallex {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 100px;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-color-opaque);
+}
+
+.below-banner-2 {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(46, 238, 161);
+}

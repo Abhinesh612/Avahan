@@ -1,0 +1,28 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: var(--nav-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    filter: blur();
+}
+
+.navbar  ol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-title {
+    text-align: center;
+    font-weight: bolder;
+    padding: 0.5rem;
+    margin: 0.5rem
+}
+
+ol, il {
+    list-style: none;
+}
