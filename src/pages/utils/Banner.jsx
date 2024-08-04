@@ -7,7 +7,7 @@ function Banner() {
                 <div className='bg bg-1'></div>
                 <div className='bg bg-2'></div>
                 <div className='bg bg-3'></div>
-                <h1>Avahan</h1>
+                <h1 className='neon-red'>AVAHAN</h1>
                 <div className='bg bg-4'></div>
                 <div className='bg bg-5'></div>
                 <div className='bg bg-6'></div>

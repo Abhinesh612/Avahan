@@ -1,4 +1,3 @@
-
 .banner {
     position: relative;
     width: 100vw;
@@ -55,11 +54,34 @@
     transform: translateZ(0px) scale(1);
 }
 
+/* .neon-red {
+    color: #f25e54;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #f09,
+      0 0 82px #f09,
+      0 0 92px #f09,
+      0 0 102px #f09,
+      0 0 151px #f09;
+  } */
+
+
+@supports (background: color(display-p3 1 1 1)) {
+    @media (dynamic-range: high) {
+        .neon-red {
+            --neon-glow: color(display-p3 1 0 0);
+        }
+    }
+}
+
 .banner h1 {
     position: absolute;
     top: 50%;
     left: 50%;
     font-size: 4.5rem;
     text-align: center;
-    transform: translateX(-50%) translateZ(-150px) scale(2.5);
+    transform: translateY(-200%) translateX(-50%) translateZ(-150px) scale(2.5);
 }
+
