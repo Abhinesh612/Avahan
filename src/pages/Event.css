@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+.main {
+  width: 100vw;
+  max-height: 250vh;
+  background-color: #fddada;
+  display: flex;
+  gap: 0;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('https://i.postimg.cc/TPKPNCy2/bgrajbhsha.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main h1 {
+  margin-top: var(--nav-height);
+  padding: 20px auto;
+  font-weight: 600;
+  color: #fff;
+  font-size: 5rem;
+}
+
+.main .titles {
+  color: #000;
+  font-size: 40px;
+}
+
+.eventline {
+  position: relative;
+  max-width: 1200px;
+  
+  margin: 100px auto;
+  z-index: 0;
+}
+
+.eventline .container {
+  position: relative;
+  width: 50%;
+  border-radius: 6px;
+  padding: 0px; /* Removed padding */
+  animation: movedown 1s linear forwards;
+  opacity: 0;
+  
+  cursor: pointer;
+  margin: 0; /* Removed any top margin */
+}
+
+.container .textbox {
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+  padding: 40% 15px 15px 10px; /* Kept for textbox content */
+  margin: 0; /* No extra margin */
+  background-color: #dc4848;
+  border-radius: 10px;
+  color: #fff;transform: scale(0.8);
+}
+
+.textbox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container:hover .textbox {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.container .textbox.tilt {
+  transform: perspective(1000px) rotateX(var(--rotateX)) rotateY(var(--rotateY));
+}
+
+@keyframes movedown {
+  0% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.textbox .header {
+  background-color: #FDFFC0; /* Yellow background */
+  padding: 5px 15px;
+  position: absolute;
+  height: 40%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0px; /* No border radius to avoid gaps */
+ /* No margin */
+}
+
+.header .left,
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+.header .left {
+  color: #1a0f24;
+  font-weight: 600;
+}
+
+.header .left h2 {
+  font-size: 30px;
+}
+
+.right button {
+  background-color: #1a0f24;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 5px 15px;
+  margin: 5px 0px;
+}
+
+.textbox small {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.textbox p {
+  margin-top: 5px;
+  font-size: 16px;
+  padding: 10px 0px;
+}
+
+.textbox .bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid white;
+  padding-top: 10px;
+}
+
+.bottom .venue {
+  font-size: 18px;
+}
+
+.left-container {
+  left: -10%; /* Moved 10% left to create space */
+}
+
+.right-container {
+  left: 60%; /* Moved 10% right to create space */
+}
+
+.container img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 32px;
+  right: -170px;
+  object-fit: cover;
+  z-index: 10;
+}
+
+.right-container img {
+  left: -170px;
+}
+
+.eventline::after {
+  content: "";
+  width: 6px;
+  height: 100%;
+  background-color: #2d112b;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+  animation: scrollit 6s linear forwards;
+}
+
+@keyframes scrollit {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.left-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #FDFFC0;
+  right: -14px;
+}
+
+.right-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #FDFFC0;
+  left: -14px;
+}
+
+.container:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.container:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.container:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.container:nth-child(4) {
+  animation-delay: 3s;
+}
+
+/* ------media queries-------------------------  */
+@media screen and (max-width: 615px) {
+  .main h1 {
+    font-size: 1.8rem;
+  }
+  .eventline {
+    padding-left: 5px;
+  }
+  .eventline::after {
+    left: 50px;
+  }
+  .container {
+    padding: 20px 30px;
+    margin: 0 10px;
+    font-size: 13px;
+  }
+  .container img {
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 42px;
+    object-fit: cover;
+    z-index: 10;
+  }
+  .eventline .container {
+    width: 100%;
+  }
+  .right-container {
+    left: 0;
+  }
+  .left-container-arrow,
+  .right-container-arrow {
+    display: none;
+  }
+}
+/* Media queries for screens less than 450px */
+/* Media queries for screens less than 450px */
+@media screen and (max-width: 450px) {
+    .main h1 {
+      font-size: 1.3rem; /* Adjust font size for smaller screens */
+    }
+   
+  
+    .eventline {
+      margin: 20px auto; /* Adjust margin for better spacing */
+      padding-left: 20px; /* Add padding for timeline visibility */
+    }
+  
+    .eventline::after {
+      left: 10%; /* Move the timeline to the left edge */
+    }
+  
+    .container {
+      padding: 15px; /* Reduce padding */
+      margin: 10px 0; /* Adjust vertical margins */
+      font-size: 14px; /* Adjust font size */
+      width: calc(100% - 20px); /* Scale down card width */
+      box-sizing: border-box; /* Include padding in width */
+    }
+    .container .textbox{
+        transform: scale(0.8);
+    }
+  
+    .container img {
+      width: 50px; /* Scale down image size */
+      height: 50px;
+      top: 10px; /* Adjust image positioning */
+      left: -15px; /* Position image inside the card */
+      object-fit: cover;
+    }
+  
+    .left-container {
+      position: relative; /* Ensure positioning for left container */
+      left: 0; /* Align left container to the left edge */
+      width: 100%; /* Full width for responsiveness */
+    }
+  
+    .right-container {
+      position: relative; /* Ensure positioning for right container */
+      left: 0; /* Align right container to the left edge */
+      width: 100%; /* Full width for responsiveness */
+    }
+  
+    .left-container-arrow,
+    .right-container-arrow {
+      display: none; /* Hide arrows on small screens */
+    }
+  
+    /* Adjust the bottom section of the textbox */
+    .textbox .bottom {
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start; /* Align items to the start */
+    }
+    .textbox p{
+        margin-top: 30%;
+        font-size: 10px;
+        padding-top: 5% ;
+        
+    }
+    .bottom .venue {
+      font-size: 16px; /* Adjust font size */
+    }
+ 
+    .bottom .right {
+      margin-top: 5px; /* Add spacing between items */
+    }
+    .right .event-btn{
+        font-size: 10px;
+    }
+  }
+  

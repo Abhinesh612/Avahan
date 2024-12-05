@@ -12,7 +12,18 @@
 }
 
 .below-banner-2 {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(46, 238, 161);
+    width: 100%;
+    height: auto;
+    background-color: #080808;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

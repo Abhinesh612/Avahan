@@ -1,0 +1,96 @@
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    /* border-radius: 10% ; */
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    width: 88%;
+    /* border-radius: 10% ; */
+}
+
+.carousel-image {
+    height: 400px;
+    width: auto;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    margin: 0 15px;
+}
+
+.carousel .slide.selected .carousel-image {
+    transform: scale(1.5);
+    z-index: 1;
+    border-radius: 20% ;
+}
+
+.carousel .slide:not(.selected) .carousel-image {
+    transform: scale(0.8);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+.image-container.rotate-out .carousel-image {
+    transform: rotate(360deg) scale(1); 
+    transition: transform 0.5s ease;
+}
+
+.carousel .control-prev.control-arrow, 
+.carousel .control-next.control-arrow {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .carousel-container {
+        width: 90%;
+    }
+    .carousel-image {
+        height: 350px;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 992px) {
+    .carousel-container {
+        width: 95%;
+    }
+    .carousel-image {
+        height: 300px;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 100%;
+    }
+    .carousel-image {
+        height: 250px;
+        margin: 0 8px;
+    }
+    .carousel .slide.selected .carousel-image {
+        transform: scale(1.5); 
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-container {
+        width: 100%;
+    }
+    .carousel-image {
+        height: 200px;
+        margin: 0 5px;
+        object-fit: cover; 
+    }
+    .carousel .slide.selected .carousel-image {
+        transform: scale(1.6);
+    }
+    .carousel .slide:not(.selected) .carousel-image {
+        transform: scale(0.7); 
+        opacity: 0.5;
+    }
+}

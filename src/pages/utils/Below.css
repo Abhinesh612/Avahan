@@ -1,0 +1,144 @@
+/* Main Container */
+.belowmain {
+    background-color: #2d112b;
+    color: #eee;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* background-image: url('https://i.postimg.cc/YCTcMP4y/bgweb12.jpg');
+    background-size: cover; /* Ensures the image covers the entire page */
+    /* background-position: center; Centers the image */
+    /* background-repeat: no-repeat; Prevents the image from repeating */
+    /* background-attachment: fixed;  */ 
+}
+
+/* Heading Section */
+.headmain {
+    margin-bottom: 30px;
+}
+
+.heading1 {
+    font-size: 40px;
+    color: #ff1b00;
+    margin: 20px 0;
+}
+
+.para {
+    font-size: 22px;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    padding: 0 10px;
+}
+
+/* Button Styling */
+.but {
+    font-size: 18px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #ff1b00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: inset 2px 2px rgba(255, 255, 255, 0.5), 
+                4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.but:hover {
+    background-color: #fb4b02;
+}
+
+/* Section Headings */
+.section2, .outerhead {
+    margin: 40px 0 20px 0;
+    opacity: 0;
+}
+
+.section2 h2, .outerhead h2 {
+    color: #ff1b00;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Content Cards */
+.content1 {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.card1 {
+    background-color: #3e1a37;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card1:hover {
+    transform: translateY(-10px);
+}
+
+.card1 h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #f1c40f;
+    text-align: center;
+}
+
+.card1 img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.card1 p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card1 {
+        width: 80%;
+    }
+
+    .heading1 {
+        font-size: 36px;
+    }
+
+    .para {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .heading1 {
+        font-size: 32px;
+    }
+
+    .para {
+        font-size: 14px;
+    }
+
+    .but {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}

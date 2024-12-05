@@ -1,14 +1,21 @@
 import { Outlet } from 'react-router-dom'
-
-import Navbar from './pages/components/Navbar'
-
+import {useEffect} from "react";
+import Navbar from './pages/components/Navbar3'
+import Footer from './pages/components/Footer'
 import './App.css'
+import ScrollToTop from './ScrollToTop';
+
 
 function App() {
+
+
   return (
     <>
-      <Navbar />
+      <ScrollToTop/>
+      <Navbar/>
       <Outlet />
+      <Footer/>
+
     </>
   )
 }

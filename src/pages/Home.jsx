@@ -1,19 +1,31 @@
+import React, { useState, useEffect } from 'react';
 import Banner from "./utils/Banner";
-import CarouselRotate from "./utils/CarouselRotate";
+import Impression from "./Impression.jsx";
+import Below from './utils/Below.jsx';
+
+// import BelowBanner from "./utils/BelowBanner";
 import "./home.css";
+import Footer from './components/Footer'
+const Home = () => {
+  
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
-function Home() {
   return (
-    <>
-      <div className="parallex">
-        <Banner />
-        <div className="wrapper">
-          <CarouselRotate />
-          <div className="below-banner-2"></div>
-        </div>
-      </div>
-    </>
-  );
-}
+    <div className="parallex example">
+      <Banner />
+      <div className="wrapper">
+        <Below />
+        {/* <div className="below-banner-2">
+        
+        </div> */}
 
-export default Home;
+        <Impression />
+     
+      </div>
+    </div>
+  );
+};
+
+export default React.memo(Home);
